@@ -9,8 +9,14 @@ export const ACTIONS= {
     IS_ERROR : "IS_ERROR",
     SET_HOME_PAGE_SONGS : "SET_HOME_PAGE_SONGS",
     ADD_SONG_TO_LIKES:'ADD_SONG_TO_LIKES',
-    REMOVE_FROM_LIKES:"REMOVE_FROM_LIKES"
+    REMOVE_FROM_LIKES:"REMOVE_FROM_LIKES",
+    ADD_TO_PLAYLIST : "ADD_TO_PLAYLIST"
 }
+
+export const addToPlaylistAction = (playlist) => ({
+type:ACTIONS.ADD_TO_PLAYLIST,
+payload : playlist
+})
 
 export const addSongToLikesAction = (song) =>({
   type:ACTIONS.ADD_SONG_TO_LIKES,

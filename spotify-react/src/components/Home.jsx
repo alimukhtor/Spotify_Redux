@@ -124,7 +124,7 @@ class Home extends React.Component {
             <div>DISCOVER</div>
           </div>
         </Row>
-        { this.props.isLoading? (<Loader/>): this.props.songs.length>0 && this.props.searchQuery? (
+        { this.props.isLoading? (<Loader/>): this.props.songs.length>0? (
           <Row>
             <Col xs={10}>
               <div id='searchResults'>

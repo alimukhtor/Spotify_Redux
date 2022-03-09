@@ -3,6 +3,7 @@ import thunk from 'redux-thunk'
 import albumsReducer from '../reducer/albumsReducer'
 import artistsReducer from '../reducer/artistsReducer'
 import { favoriteSongReducer } from '../reducer/favoriteSongReducer'
+import playlistReducer from '../reducer/playlistReducer'
 import songsReducer from '../reducer/songsReducer'
 
 // window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
@@ -25,6 +26,7 @@ export const initialState = {
         isLoading:true,
         isError:false,
     },
+    playlist : [],
     album:{
         albums:[]
     },
@@ -42,7 +44,8 @@ const multiReducer = combineReducers({
     song: songsReducer,
     album: albumsReducer,
     artist:artistsReducer,
-    likes:favoriteSongReducer
+    likes:favoriteSongReducer,
+    playlist: playlistReducer
 })
 
 // *************** CONFIGURATION STOREE HERE *****************
